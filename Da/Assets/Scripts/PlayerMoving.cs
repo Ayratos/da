@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMoving : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float rotationSpeed = 180f;
+    public float moveSpeed = 5;
+    public float rotationSpeed = 180;
     private int direction = 1;
     private Rigidbody2D rb;
     // Start is called before the first frame update

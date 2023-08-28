@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 500b0be4c166d0a47b92f2676bfcfa5c
+guid: db81f5c3ba9ebac45a0415e1930a2c75
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -121,60 +121,60 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 470
-        y: 345
-        width: 111
-        height: 117
+        y: 350
+        width: 107
+        height: 110
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9882890bdcf30f499b9a616c3e8baf7
-      internalID: -2138865514
+      spriteID: ed991a86252a10743b90e040b790b65a
+      internalID: 646362032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bake
+      name: Beak
       rect:
         serializedVersion: 2
-        x: 592
-        y: 337
-        width: 103
-        height: 115
+        x: 590
+        y: 343
+        width: 105
+        height: 95
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b23f32cb768cdd446a7d5ee63f2c0359
-      internalID: 442258117
+      spriteID: e09bde9a62a35424290fb710982d8850
+      internalID: -1677157037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Feather
+      name: Feather3
       rect:
         serializedVersion: 2
-        x: 465
-        y: 464
-        width: 88
-        height: 83
+        x: 365
+        y: 327
+        width: 99
+        height: 81
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59659efd641fb4845a0b962c6f065cfc
-      internalID: -1407473152
+      spriteID: b920f09cda3aac24fb00d26249624db2
+      internalID: 344437093
       vertices: []
       indices: 
       edges: []
@@ -184,51 +184,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 391
-        y: 410
+        y: 408
         width: 74
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b309655170d95041ae0069e7c9d2f9b
-      internalID: -1507396476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Feather3
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 326
-        width: 103
-        height: 79
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a517d46429f7e4a458ad911370427989
-      internalID: -747892922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Body2
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 242
-        width: 134
-        height: 123
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c706e560fa6838840b285b44debbb675
-      internalID: -1759392730
+      spriteID: 1c75152bfff06344db1799d25e5def13
+      internalID: 2115925550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eye
+      name: Feather
       rect:
         serializedVersion: 2
-        x: 186
-        y: 187
-        width: 40
-        height: 48
+        x: 474
+        y: 464
+        width: 73
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +215,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 264ff81ebd9eb1f41ae96ede41575a72
-      internalID: 376272136
+      spriteID: dd6c07249dd7d014ba24f63480c66ea1
+      internalID: -867745977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WhiteFeather
+      name: Dot
       rect:
         serializedVersion: 2
-        x: 223
-        y: 84
-        width: 35
-        height: 84
+        x: 627
+        y: 474
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.44788522, y: 0.5491394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66562ab252370f043851c3baaaebf5f1
+      internalID: -243085386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 188
+        width: 48
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,29 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa8b718c77512c54080cb1aafa38f625
-      internalID: -90561614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WhiteFeather2
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 3
-        width: 24
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2432b6b029ad4424a87acebfb80d5f64
-      internalID: 2014640561
+      spriteID: c7e8ad20e55db6c48a9caedc02215334
+      internalID: -122189958
       vertices: []
       indices: 
       edges: []
@@ -316,15 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bake: 442258117
-      Body: -2138865514
-      Body2: -1759392730
-      Eye: 376272136
-      Feather: -1407473152
-      Feather2: -1507396476
-      Feather3: -747892922
-      WhiteFeather: -90561614
-      WhiteFeather2: 2014640561
+      Beak: -1677157037
+      Body: 646362032
+      Dot: -243085386
+      Feather: -867745977
+      Feather2: 2115925550
+      Feather3: 344437093
+      M: -122189958
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
