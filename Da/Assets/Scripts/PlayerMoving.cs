@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMoving : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class PlayerMoving : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("HitPlayer"))
+        {
+            Die();
+        }
+
         if(collision.gameObject.CompareTag("Wall"))
         {
             Flip();
@@ -33,5 +39,10 @@ public class PlayerMoving : MonoBehaviour
         direction *= -1;
         rb.velocity = new Vector2(moveSpeed * direction, rb.velocity.y);
         transform.Rotate(Vector3.up, 180f);
+    }
+    private void Die()
+    {
+        SceneManager.LoadScene("Main");
+
     }
 }
