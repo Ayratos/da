@@ -10,9 +10,12 @@ public class PlayerMoving : MonoBehaviour
     private int direction = 1;
     private Rigidbody2D rb;
     public static bool lose;
-    // Start is called before the first frame update
+    public GameObject ReplayMenu;
+    public static bool touchedWall; //щрн дкъ яверю, нопедекъер ярнкймнбемхе
+    public GameController gameController;
     void Start()
     {
+        touchedWall = false;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(moveSpeed * direction, rb.velocity.y);
         lose = false;
@@ -34,17 +37,28 @@ public class PlayerMoving : MonoBehaviour
         {
             Flip();
         }
+        else if (!collision.gameObject.CompareTag("Wall"))
+        {
+            touchedWall = false;
+        }
     }
     private void Flip()
     {
         direction *= -1;
         rb.velocity = new Vector2(moveSpeed * direction, rb.velocity.y);
         transform.Rotate(Vector3.up, 180f);
+        //if (gameController != null)
+        //    gameController.ScorePlus();
+        touchedWall = true;
     }
     private void Die()
     {
         lose = true;
-        SceneManager.LoadScene("Main");
+        ReplayMenu.SetActive(true);
 
+    }
+    public void Replay()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

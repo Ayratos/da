@@ -5,9 +5,8 @@ public class GameController : MonoBehaviour
 {
     public float scoreCounter;
     public float highScoreCounter;
-    public Text score;
+    public TextMesh score;
     public Text highScore;
-    public bool GamePaused;
     //private TextLanguage TextLang;
     private void Start()
     {
@@ -17,26 +16,33 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
-        if (!PlayerMoving.lose && !GamePaused)
+        if(PlayerMoving.touchedWall)
         {
-            scoreCounter += Time.deltaTime;
+            ScorePlus();
+        }
+        if (!PlayerMoving.lose)
+        {
             ScoreText();
         }
         if (PlayerMoving.lose)
         {
             HscoreText();
-            PlayerPrefs.SetFloat("SaveScore", highScoreCounter);
+            
         }
-        else if (scoreCounter > highScoreCounter)
+        if (scoreCounter > highScoreCounter)
         {
             highScoreCounter = scoreCounter;
-
             PlayerPrefs.SetFloat("SaveScore", highScoreCounter);
         }
         //else if(Input.GetKeyDown(KeyCode.Space))
         //{
         //    Invoke("ResetHighScore", 1);
         //}
+    }
+    public void ScorePlus()
+    {
+        scoreCounter++;
+        PlayerMoving.touchedWall = false;
     }
     void ScoreText()
     {
@@ -53,12 +59,13 @@ public class GameController : MonoBehaviour
     {
         if (highScoreCounter < 10)
         {
-            highScore.text = 0 + scoreCounter.ToString("f0");
+            highScore.text = 0 + highScoreCounter.ToString("f0");
         }
         else if (highScoreCounter > 8 && scoreCounter < 100)
         {
-            highScore.text = scoreCounter.ToString("f0");
+            highScore.text = highScoreCounter.ToString("f0");
         }
+        PlayerPrefs.SetFloat("SaveScore", highScoreCounter);
     }
     void ResetHighScore()
     {
