@@ -7,25 +7,22 @@ public class GameController : MonoBehaviour
     public float highScoreCounter;
     public Text score;
     public Text highScore;
-    private TextLanguage TextLang;
+    public bool GamePaused;
+    //private TextLanguage TextLang;
     private void Start()
     {
         if (PlayerPrefs.HasKey("SaveScore"))
             highScoreCounter = PlayerPrefs.GetFloat("SaveScore");
-        TextLang = score.GetComponent<TextLanguage>();
+        //TextLang = score.GetComponent<TextLanguage>();
     }
     void Update()
     {
-        if (!Player.lose && !LevelsButton.GamePaused)
+        if (!PlayerMoving.lose && !GamePaused)
         {
             scoreCounter += Time.deltaTime;
             ScoreText();
         }
-        if (!Player.lose && !LevelsButton.GamePaused)
-        {
-            scoreCounter += Laser.BombDestroy;
-        }
-        if (Player.lose)
+        if (PlayerMoving.lose)
         {
             HscoreText();
             PlayerPrefs.SetFloat("SaveScore", highScoreCounter);

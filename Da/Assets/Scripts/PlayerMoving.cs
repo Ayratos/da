@@ -9,12 +9,13 @@ public class PlayerMoving : MonoBehaviour
     public float rotationSpeed = 180;
     private int direction = 1;
     private Rigidbody2D rb;
+    public static bool lose;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(moveSpeed * direction, rb.velocity.y);
-        
+        lose = false;
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class PlayerMoving : MonoBehaviour
     }
     private void Die()
     {
+        lose = true;
         SceneManager.LoadScene("Main");
 
     }
