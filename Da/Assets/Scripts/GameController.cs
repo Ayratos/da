@@ -46,22 +46,22 @@ public class GameController : MonoBehaviour
     }
     void ScoreText()
     {
-        if (scoreCounter < 9)
+        if (scoreCounter <= 9)
         {
             score.text = 0 + scoreCounter.ToString("f0");
         }
-        else if (scoreCounter > 10 && scoreCounter < 100)
+        else if (scoreCounter >= 10 && scoreCounter < 100)
         {
             score.text = scoreCounter.ToString("f0");
         }
     }
     void HscoreText()
     {
-        if (highScoreCounter < 10)
+        if (highScoreCounter  <= 10)
         {
             highScore.text = 0 + highScoreCounter.ToString("f0");
         }
-        else if (highScoreCounter > 8 && scoreCounter < 100)
+        else if (highScoreCounter >= 8 && scoreCounter < 100)
         {
             highScore.text = highScoreCounter.ToString("f0");
         }
