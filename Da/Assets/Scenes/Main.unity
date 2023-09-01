@@ -1285,6 +1285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 15
   gravity: 1
+  speedRotate: 3
 --- !u!50 &301318988
 Rigidbody2D:
   serializedVersion: 4
@@ -2007,7 +2008,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2081,54 +2081,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c9b48d1da7b21d43b91084f03544f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trianglesLeft:
-  - {fileID: 561910452}
-  - {fileID: 1791439539}
-  - {fileID: 711211545}
-  - {fileID: 1940411458}
-  - {fileID: 249541667}
-  - {fileID: 1494433304}
-  - {fileID: 75218379}
-  - {fileID: 2056319809}
-  - {fileID: 185307667}
-  - {fileID: 1317172986}
-  - {fileID: 1471489052}
-  - {fileID: 796639801}
-  - {fileID: 1657069848}
-  - {fileID: 1394169590}
-  - {fileID: 157166879}
-  trianglesRight:
-  - {fileID: 313794734}
-  - {fileID: 702053231}
-  - {fileID: 568638396}
-  - {fileID: 664241936}
-  - {fileID: 1532760435}
-  - {fileID: 678692895}
-  - {fileID: 1222231427}
-  - {fileID: 1776466594}
-  - {fileID: 1076264885}
-  - {fileID: 1334180110}
-  - {fileID: 1327354085}
-  - {fileID: 1219242019}
-  - {fileID: 808973176}
-  - {fileID: 1306114096}
-  - {fileID: 878799652}
-  scoreCounter: 0
-  highScoreCounter: 0
-  score: {fileID: 453711498}
-  highScore: {fileID: 1831280511}
 --- !u!1001 &560169935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4580,6 +4532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1246513067}
   - component: {fileID: 1246513066}
+  - component: {fileID: 1246513068}
   m_Layer: 0
   m_Name: Wall1
   m_TagString: Wall
@@ -4629,7 +4582,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+  m_Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4658,6 +4611,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1246513068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246513065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9b48d1da7b21d43b91084f03544f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trianglesLeft:
+  - {fileID: 561910452}
+  - {fileID: 1791439539}
+  - {fileID: 711211545}
+  - {fileID: 1940411458}
+  - {fileID: 249541667}
+  - {fileID: 1494433304}
+  - {fileID: 75218379}
+  - {fileID: 2056319809}
+  - {fileID: 185307667}
+  - {fileID: 1317172986}
+  - {fileID: 1471489052}
+  - {fileID: 796639801}
+  - {fileID: 1657069848}
+  - {fileID: 1394169590}
+  - {fileID: 157166879}
+  trianglesRight:
+  - {fileID: 313794734}
+  - {fileID: 702053231}
+  - {fileID: 568638396}
+  - {fileID: 664241936}
+  - {fileID: 1532760435}
+  - {fileID: 678692895}
+  - {fileID: 1222231427}
+  - {fileID: 1776466594}
+  - {fileID: 1076264885}
+  - {fileID: 1334180110}
+  - {fileID: 1327354085}
+  - {fileID: 1219242019}
+  - {fileID: 808973176}
+  - {fileID: 1306114096}
+  - {fileID: 878799652}
+  scoreCounter: 0
+  highScoreCounter: 0
+  score: {fileID: 453711498}
+  highScore: {fileID: 1831280511}
 --- !u!1001 &1258470576
 PrefabInstance:
   m_ObjectHideFlags: 0

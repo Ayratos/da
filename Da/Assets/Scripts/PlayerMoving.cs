@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMoving : MonoBehaviour
 {
-    public float moveSpeed = 8;
+    public float moveSpeed = 25;
     public float rotationSpeed = 180;
     private int direction = 1;
     private Rigidbody2D rb;

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
 public class GameController : MonoBehaviour
 {
     public GameObject[] trianglesLeft;
@@ -16,6 +16,15 @@ public class GameController : MonoBehaviour
     public Text highScore;
     //private TextLanguage TextLang;
 
+    private SpriteRenderer Current;
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("SaveScore"))
+            highScoreCounter = PlayerPrefs.GetFloat("SaveScore");
+        //TextLang = score.GetComponent<TextLanguage>();
+        Current = GetComponent<SpriteRenderer>();
+    }
     public void Triangle()
     {
         if (!left)
@@ -52,7 +61,7 @@ public class GameController : MonoBehaviour
         left = true;
         
         int i = 0;
-        while (i < 16)
+        while (i <= trianglesRight.Length)
         {
             trianglesRight[i++].SetActive(false);
         }
@@ -78,17 +87,12 @@ public class GameController : MonoBehaviour
 
 
         int i = 0;
-        while (i < 16)
+        while (i <= trianglesLeft.Length)
         {
             trianglesLeft[i++].SetActive(false);
         }
     }
-    private void Start()
-    {
-        if (PlayerPrefs.HasKey("SaveScore"))
-            highScoreCounter = PlayerPrefs.GetFloat("SaveScore");
-        //TextLang = score.GetComponent<TextLanguage>();
-    }
+    
     void Update()
     {
         if(PlayerMoving.touchedWall)
@@ -114,6 +118,12 @@ public class GameController : MonoBehaviour
         //{
         //    Invoke("ResetHighScore", 1);
         //}
+        if (scoreCounter > 5)
+        {
+            Color c = Current.material.color;
+            c.r = 1;
+            Current.material.color = c;
+        }
     }
     public void ScorePlus()
     {
@@ -148,4 +158,16 @@ public class GameController : MonoBehaviour
         PlayerPrefs.DeleteKey("SaveScore");
         highScoreCounter = 0;
     }
+    IEnumerator FadeOut()
+    {
+        for (float f = 0.05f; f < 1f; f += 0.02f)
+        {
+            Color c = Current.material.color;
+            c.b = 1;
+            Current.material.color = c;
+            yield return new WaitForSeconds(0.05f);
+
+        }
+    }
+
 }
