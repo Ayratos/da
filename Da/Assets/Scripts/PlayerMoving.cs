@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMoving : MonoBehaviour
 {
-    public float moveSpeed = 5;
+    public float moveSpeed = 8;
     public float rotationSpeed = 180;
     private int direction = 1;
     private Rigidbody2D rb;
-    public static bool lose;
-    public GameObject ReplayMenu;
-    public static bool touchedWall; //щрн дкъ яверю, нопедекъер ярнкймнбемхе
+    public static bool lose; //опнхцпшы
+    public GameObject ReplayMenu; //лемч пеярюпрю
+    public static bool touchedWall; //нопедекъер ярнкймнбемхе
     public GameController gameController;
     void Start()
     {

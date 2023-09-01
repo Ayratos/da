@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    public float jumpForce = 10f;
-    public float gravity = 4f;
+    public float jumpForce = 2f;
+    public float gravity = 2f;
+    public float speedRotate = 3;
 
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -29,5 +30,12 @@ public class PlayerJump : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
-    
+    private void RotDown()
+    {
+        transform.Rotate(Vector3.forward * speedRotate);
+    }
+    //private void FixedUpdate()
+    //{
+    //    transform.rotation = Quaternion.Euler(0, 0, rb.velocity.y * speedRotate);
+    //}
 }
