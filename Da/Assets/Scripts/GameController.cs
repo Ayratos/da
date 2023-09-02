@@ -46,12 +46,13 @@ public class GameController : MonoBehaviour
     {
         IndexLeft = Random.Range(0, trianglesLeft.Length);
         trianglesLeft[IndexLeft].SetActive(true);
-        int IndexLeft2;
+        int triangelcounter = Random.Range(1, 7);
         do
         {
-            IndexLeft2 = Random.Range(0, trianglesLeft.Length);
-            trianglesLeft[IndexLeft2].SetActive(true);
-        } while (IndexLeft2 == IndexLeft);
+            int IndexLeft = Random.Range(0,trianglesLeft.Length);
+            trianglesLeft[IndexLeft].SetActive(true);
+            --triangelcounter;
+        } while (triangelcounter != 0);
         //int IndexLeft3;
         //do
         //{
@@ -72,12 +73,13 @@ public class GameController : MonoBehaviour
         
         IndexRight = Random.Range(0, trianglesRight.Length);
         trianglesRight[IndexRight].SetActive(true);
-        int IndexRight2;
-        do 
+        int triangelcounter = Random.Range(1, 7);
+        do
         {
-            IndexRight2 = Random.Range(0, trianglesRight.Length);
-            trianglesRight[IndexRight2].SetActive(true);
-        } while (IndexRight2 == IndexRight);
+            int IndexRight = Random.Range(0,trianglesRight.Length);
+            trianglesRight[IndexRight].SetActive(true);
+            --triangelcounter;
+        } while (triangelcounter != 0);
         //int IndexRight3;
         //do
         //{
