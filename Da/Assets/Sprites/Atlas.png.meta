@@ -272,7 +272,7 @@ TextureImporter:
         width: 136
         height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,7 +293,7 @@ TextureImporter:
         width: 69
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,6 +301,48 @@ TextureImporter:
       bones: []
       spriteID: ae7a531cfff17634990f3e75b82d9e38
       internalID: -1481918357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KREST
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 250
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe5d9a81bdc71743a0f0f6dbbd776a6
+      internalID: 456539144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REalFeather
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 48
+        width: 181
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bb44d68f73f8d42b363716375d9aac
+      internalID: 1224827718
       vertices: []
       indices: 
       edges: []
@@ -323,8 +365,10 @@ TextureImporter:
       Feather: -867745977
       Feather2: 2115925550
       Feather3: 344437093
+      KREST: 456539144
       M: -122189958
       Polygon: -1481918357
+      REalFeather: 1224827718
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

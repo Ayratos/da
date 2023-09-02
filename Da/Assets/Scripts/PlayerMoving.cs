@@ -11,6 +11,7 @@ public class PlayerMoving : MonoBehaviour
     private Rigidbody2D rb;
     public static bool lose; //œ–Œ»√–€Ÿ
     public GameObject ReplayMenu; //Ã≈Õﬁ –≈—“¿–“¿
+    public GameObject Dead;
     public static bool touchedWall; //Œœ–≈ƒ≈Àﬂ≈“ —“ŒÀ ÕŒ¬≈Õ»≈
     public GameController gameController;
     void Start()
@@ -28,16 +29,16 @@ public class PlayerMoving : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("HitPlayer"))
+        if (collision.gameObject.CompareTag("HitPlayer") && !lose)
         {
             Die();
         }
 
-        if(collision.gameObject.CompareTag("Wall"))
+        if(collision.gameObject.CompareTag("Wall") && !lose)
         {
             Flip();
         }
-        else if (!collision.gameObject.CompareTag("Wall"))
+        else if (!collision.gameObject.CompareTag("Wall") && !lose)
         {
             touchedWall = false;
         }
@@ -55,6 +56,7 @@ public class PlayerMoving : MonoBehaviour
     {
         lose = true;
         ReplayMenu.SetActive(true);
+        Dead.SetActive(true);
 
     }
     public void Replay()

@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public float highScoreCounter;
     public TextMesh score;
     public Text highScore;
+    public Text scoreT;
     //private TextLanguage TextLang;
 
     private SpriteRenderer Current;
@@ -169,6 +170,14 @@ public class GameController : MonoBehaviour
             highScore.text = highScoreCounter.ToString("f0");
         }
         PlayerPrefs.SetFloat("SaveScore", highScoreCounter);
+        if (scoreCounter <= 9)
+        {
+            scoreT.text = 0 + scoreCounter.ToString("f0");
+        }
+        else if (scoreCounter >= 10 && scoreCounter < 100)
+        {
+            scoreT.text = scoreCounter.ToString("f0");
+        }
     }
     void ResetHighScore()
     {
