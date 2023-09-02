@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
             highScoreCounter = PlayerPrefs.GetFloat("SaveScore");
         //TextLang = score.GetComponent<TextLanguage>();
         Current = GetComponent<SpriteRenderer>();
+        
     }
     public void Triangle()
     {
@@ -61,7 +62,7 @@ public class GameController : MonoBehaviour
         left = true;
         
         int i = 0;
-        while (i <= trianglesRight.Length)
+        while (i < trianglesRight.Length)
         {
             trianglesRight[i++].SetActive(false);
         }
@@ -87,7 +88,7 @@ public class GameController : MonoBehaviour
 
 
         int i = 0;
-        while (i <= trianglesLeft.Length)
+        while (i < trianglesLeft.Length)
         {
             trianglesLeft[i++].SetActive(false);
         }
@@ -118,11 +119,25 @@ public class GameController : MonoBehaviour
         //{
         //    Invoke("ResetHighScore", 1);
         //}
-        if (scoreCounter > 5)
+        if (scoreCounter == 5)
         {
-            Color c = Current.material.color;
-            c.r = 1;
-            Current.material.color = c;
+            ColorChange1();
+        }
+        else if (scoreCounter == 10)
+        {
+            ColorChange2();
+        }
+        else if (scoreCounter == 15)
+        {
+            ColorChange3();
+        }
+        else if (scoreCounter == 20)
+        {
+            ColorChange4();
+        }
+        else if (scoreCounter == 25)
+        {
+            ColorChange5();
         }
     }
     public void ScorePlus()
@@ -169,5 +184,25 @@ public class GameController : MonoBehaviour
 
         }
     }
-
+    void ColorChange1()
+    {
+        Current.material.color = Color.Lerp(Current.material.color, Color.green, 2 * Time.deltaTime);
+        
+    }
+    void ColorChange2()
+    {
+        Current.material.color = Color.Lerp(Current.material.color, Color.blue, 2 * Time.deltaTime);
+    }
+    void ColorChange3()
+    {
+        Current.material.color = Color.Lerp(Current.material.color, Color.black, 2 * Time.deltaTime);
+    }
+    void ColorChange4()
+    {
+        Current.material.color = Color.Lerp(Current.material.color, Color.yellow, 2 * Time.deltaTime);
+    }
+    void ColorChange5()
+    {
+        Current.material.color = Color.Lerp(Current.material.color, Color.red, 2 * Time.deltaTime);
+    }
 }
