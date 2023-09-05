@@ -9,10 +9,10 @@ public class PlayerMoving : MonoBehaviour
     public float rotationSpeed = 180;
     private int direction = 1;
     private Rigidbody2D rb;
-    public static bool lose; //опнхцпшы
-    public GameObject ReplayMenu; //лемч пеярюпрю
+    public static bool lose; //О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+    public GameObject ReplayMenu; //О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
     public GameObject Dead;
-    public static bool touchedWall; //нопедекъер ярнкймнбемхе
+    public static bool touchedWall; //О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
     public GameController gameController;
     void Start()
     {
