@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - HitPlayer
+  - Square
   layers:
   - Default
   - TransparentFX

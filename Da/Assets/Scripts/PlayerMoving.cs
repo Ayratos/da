@@ -33,8 +33,16 @@ public class PlayerMoving : MonoBehaviour
         {
             Die();
         }
+        if (collision.gameObject.CompareTag("Square") && !lose)
+        {
+            
+            gameController.Triangle();
+            Flip();
+            gameController.ScorePlus();
+            gameController.ScorePlus();
+        }
 
-        if(collision.gameObject.CompareTag("Wall") && !lose)
+        if (collision.gameObject.CompareTag("Wall") && !lose)
         {
             Flip();
         }
