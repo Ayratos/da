@@ -5,6 +5,10 @@ public class GameController : MonoBehaviour
 {
     public GameObject[] trianglesLeft;
     public GameObject[] trianglesRight;
+    public GameObject[] squareR;
+    public GameObject[] squareL;
+    int squarelcounterR;
+    int squarelcounterL;
     private bool left; //летит к левой стенке
     private int NumOfSpikes;
     private int IndexLeft;
@@ -47,6 +51,9 @@ public class GameController : MonoBehaviour
     {
         IndexLeft = Random.Range(0, trianglesLeft.Length);
         trianglesLeft[IndexLeft].SetActive(true);
+        squarelcounterL = Random.Range(1, 15);
+        squareL[squarelcounterL].SetActive(true);
+        squareR[squarelcounterR].SetActive(false);
         int triangelcounter = Random.Range(1, 7);
         do
         {
@@ -54,12 +61,6 @@ public class GameController : MonoBehaviour
             trianglesLeft[IndexLeft].SetActive(true);
             --triangelcounter;
         } while (triangelcounter != 0);
-        //int IndexLeft3;
-        //do
-        //{
-        //    IndexLeft3 = Random.Range(0, trianglesLeft.Length);
-        //    trianglesLeft[IndexLeft3].SetActive(true);
-        //} while (IndexLeft3 != IndexLeft);
 
         left = true;
         
@@ -74,24 +75,23 @@ public class GameController : MonoBehaviour
         
         IndexRight = Random.Range(0, trianglesRight.Length);
         trianglesRight[IndexRight].SetActive(true);
+        squarelcounterR = Random.Range(1, 15);
+        squareR[squarelcounterR].SetActive(true);
+        squareL[squarelcounterL].SetActive(false);
         int triangelcounter = Random.Range(1, 7);
-        do
+        do //Добавляет нужные шипы
         {
             int IndexRight = Random.Range(0,trianglesRight.Length);
             trianglesRight[IndexRight].SetActive(true);
             --triangelcounter;
         } while (triangelcounter != 0);
-        //int IndexRight3;
-        //do
-        //{
-        //    IndexRight3 = Random.Range(0, trianglesRight.Length);
-        //    trianglesRight[IndexRight3].SetActive(true);
-        //} while (IndexRight3 != IndexLeft);
+        
         left = false;
 
 
+
         int i = 0;
-        while (i < trianglesLeft.Length)
+        while (i < trianglesLeft.Length) //Скрывание ненужных шипов
         {
             trianglesLeft[i++].SetActive(false);
         }
