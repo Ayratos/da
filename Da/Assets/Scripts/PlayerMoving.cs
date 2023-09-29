@@ -38,8 +38,8 @@ public class PlayerMoving : MonoBehaviour
             
             gameController.Triangle();
             Flip();
-            gameController.ScorePlus();
-            gameController.ScorePlus();
+            //gameController.ScorePlus();
+            //gameController.ScorePlus();
         }
 
         if (collision.gameObject.CompareTag("Wall") && !lose)

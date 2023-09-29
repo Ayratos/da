@@ -51,17 +51,19 @@ public class GameController : MonoBehaviour
     {
         IndexLeft = Random.Range(0, trianglesLeft.Length);
         trianglesLeft[IndexLeft].SetActive(true);
-        squarelcounterL = Random.Range(1, 15);
-        squareL[squarelcounterL].SetActive(true);
-        squareR[squarelcounterR].SetActive(false);
         int triangelcounter = Random.Range(1, 7);
+        
+        
+        
         do
         {
             int IndexLeft = Random.Range(0,trianglesLeft.Length);
             trianglesLeft[IndexLeft].SetActive(true);
             --triangelcounter;
         } while (triangelcounter != 0);
-
+        squarelcounterL = Random.Range(1, 15);
+        squareL[squarelcounterL].SetActive(true);
+        squareR[squarelcounterR].SetActive(false);
         left = true;
         
         int i = 0;
@@ -75,17 +77,20 @@ public class GameController : MonoBehaviour
         
         IndexRight = Random.Range(0, trianglesRight.Length);
         trianglesRight[IndexRight].SetActive(true);
-        squarelcounterR = Random.Range(1, 15);
-        squareR[squarelcounterR].SetActive(true);
-        squareL[squarelcounterL].SetActive(false);
         int triangelcounter = Random.Range(1, 7);
+        
+        
         do //Добавляет нужные шипы
         {
             int IndexRight = Random.Range(0,trianglesRight.Length);
             trianglesRight[IndexRight].SetActive(true);
             --triangelcounter;
         } while (triangelcounter != 0);
+        squarelcounterR = Random.Range(1, 15);
         
+        
+        squareR[squarelcounterR].SetActive(true);
+        squareL[squarelcounterL].SetActive(false);
         left = false;
 
 
@@ -146,6 +151,11 @@ public class GameController : MonoBehaviour
     public void ScorePlus()
     {
         scoreCounter++;
+        PlayerMoving.touchedWall = false;
+    }
+    public void ScoreMinus()
+    {
+        scoreCounter--;
         PlayerMoving.touchedWall = false;
     }
     void ScoreText()
